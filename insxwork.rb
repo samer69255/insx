@@ -56,10 +56,10 @@ def Create(n)
 		ck = res.get_fields('set-cookie')
 		cookies_array = Array.new
 		ck.each { | cookie |
-        cookies_array.push(cookie.split('; ')[0])
+        puts cookie
 		}
 		cc = cookies_array.join('; ')
-		save($email, cc)
+		#save($email, cc)
     end
 end
 
