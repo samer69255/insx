@@ -55,7 +55,7 @@ def Create(n)
     elsif json["account_created"] == true
 		ck = res.get_fields('set-cookie')
 		cookies_array = Array.new
-		put ck
+		puts ck
 		cc = cookies_array.join('; ')
 		#save($email, cc)
     end
