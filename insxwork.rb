@@ -55,8 +55,12 @@ def Create(n)
     elsif json["account_created"] == true
 		ck = res.get_fields('set-cookie')
 		cookies_array = Array.new
-		puts ck[6]
+		ck.each { | cookie |
+        cookies_array.push(cookie.split('; ')[0])
+		}
 		cc = cookies_array.join('; ')
+		ssid = cc.match(/sessionid=(.*?);/)
+		puts ssid
 		#save($email, cc)
     end
 end
